@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom'
 import '../App.css'
 import '../props.css'
 import ModalSignin from "../component/ModalSignin"
+import Cara from "./carousel"
+
+
+import Ima from '../images/sale.png'
+import IMA from '../images/adv2.png'
 
 export default function Header() {
 const nav =[
@@ -207,9 +212,12 @@ const nav =[
         
           <ModalSignin/>
           
+            <img src={Ima} style={{marginTop:"101px",width:"100%" ,display:"flex"}}  alt="sale"/>
+         <a href="https://www.vivo.com/pk/activity/v20series" target="_blank"> <img src={IMA} alt="adv2"/></a>
         
-        
-        
+          <div style={{marginTop:"30px" ,marginLeft:"100px",alignItems:"center", backgroundColor:"rgb(235,238,239)", width:"1000px", height:'300px'}}><Cara /></div>
+            
+          
           
         </>
     )
