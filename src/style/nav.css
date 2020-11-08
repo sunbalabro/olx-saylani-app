@@ -1,0 +1,16 @@
+.condition button:hover{
+  background-color: rgb(200, 248, 246);
+  color:rgb(0, 193,193);
+  border:1px solid rgb(0,193,193);
+}
+.condition button{
+  background-color: #fff;
+  color:rgb(0, 47, 52);
+  border:1px solid rgb(0,47,52);
+}
+::placeholder {
+  color: rgb(0,47,52);
+}
+input[value="+92 |"]{
+  color: rgb(182, 186, 187);
+}

@@ -33,37 +33,37 @@ export default class Footer extends Component {
                 <div className="column" style={{marginLeft:"100px", height:"100px", width:"180px"}}>
                     <h5 style={{color:"rgb(0,47,52)", fontWeight:"bold"}}>POPULAR CATAGORIES</h5>
                     <div style={{marginTop:"10px", marginLeft:"4px"}}>
-                    <a style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>Cars</h6></a>
-                    <a style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>Flats for rent</h6></a>
-                    <a style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>Jobs</h6></a>
-                    <a style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>Mobile Phones</h6></a>
+                    <a href="/" style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>Cars</h6></a>
+                    <a href="/" style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>Flats for rent</h6></a>
+                    <a href="/" style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>Jobs</h6></a>
+                    <a href="/" style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>Mobile Phones</h6></a>
                     </div>
                 </div>
                 <div className="column" style={{width:"180px" , height:"100px"}}>
                     <h5 style={{color:"rgb(0,47,52)", fontWeight:"bold"}}>TRENDING SEARCHES</h5>
                     <div style={{marginTop:"10px", marginLeft:"11px"}}>
-                    <a style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>Bikes</h6></a>
-                    <a style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>Watches</h6></a>
-                    <a style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>Books</h6></a>
-                    <a style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>Dogs</h6></a>
+                    <a href="/" style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>Bikes</h6></a>
+                    <a href="/" style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>Watches</h6></a>
+                    <a href="/" style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>Books</h6></a>
+                    <a href="/" style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>Dogs</h6></a>
                     </div>
                     
                 </div>
                 <div className="column" style={{height:"100px", width:"180px"}}>
                     <h5 style={{color:"rgb(0,47,52)", fontWeight:"bold"}}>ABOUT US</h5>
                     <div style={{marginTop:"10px", marginLeft:"40px"}}>
-                    <a style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>About OLX Groups</h6></a>
-                    <a style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>OLX Blogs</h6></a>
-                    <a style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>Contact Us</h6></a>
-                    <a style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>OLX for Businesses</h6></a>
+                    <a href="/" style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>About OLX Groups</h6></a>
+                    <a href="/" style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>OLX Blogs</h6></a>
+                    <a href="/" style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>Contact Us</h6></a>
+                    <a href="/" style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>OLX for Businesses</h6></a>
                     </div>
                 </div>
                 <div className="column" style={{height:"100px", width:"180px"}}>
                     <h5  style={{color:"rgb(0,47,52)", fontWeight:"bold"}}>OLX</h5>
                     <div style={{marginTop:"10px", marginLeft:"60px"}}>
-                    <a style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>Help </h6></a>
-                    <a style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>Site map</h6></a>
-                    <a style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>Legal & Privacy information</h6></a>
+                    <a href="/" style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>Help </h6></a>
+                    <a href="/" style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>Site map</h6></a>
+                    <a href="/" style={{margin:"5px", color:"rgb(88,118,122)"}}><h6>Legal & Privacy information</h6></a>
                     
                     </div>
                 </div>

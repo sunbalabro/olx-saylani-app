@@ -4,6 +4,7 @@ import '../props.css'
 import Image from '../images/image.png'
 import Image2 from '../images/images.png'
 import Image3 from "../images/the-road-815297__340.png"
+import Form from "./form"
 export default function ModalSignin() {
     return (
         <>
@@ -31,19 +32,20 @@ export default function ModalSignin() {
                   {/*begin carousel*/}
       <div id="myGallery" className="carousel slide" data-interval="false">
         <div className="carousel-inner">
-          <div className="item active"> <img src={Image} style={{width:"100px"}} alt="item0" />
+          <div className="item active"> <img src={Image} style={{width:"100px", border:"1px solid black"}} alt="item0" />
+          
             <div className="carousel-caption">
               <h3>Heading 3</h3>
               <p>Slide 0  description.</p>
             </div>
           </div>
-          <div className="item"> <img src={Image2} alt="item1" />
+          <div className="item"> <img src={Image2} style={{width:"135px"}} alt="item1" />
             <div className="carousel-caption">
               <h3>Heading 3</h3>
               <p>Slide 1 description.</p>
             </div>
           </div>
-          <div className="item"> <img src={Image3} alt="item2" />
+          <div className="item"> <img src={Image3} style={{width:"124px"}} alt="item2" />
             <div className="carousel-caption">
               <h3>Heading 3</h3>
               <p>Slide 2  description.</p>
@@ -57,6 +59,8 @@ export default function ModalSignin() {
         {/*end carousel*/}
         
       </div>
+      <br/>
+      <Form />
               {/*end modal-body*/}</div>
             <div className="modal-footer">
               <div className="pull-left">

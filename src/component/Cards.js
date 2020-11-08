@@ -1,65 +1,20 @@
 import React, { Component } from 'react'
+import {connect } from "react-redux"
 import Card from 'react-bootstrap/Card'
 import Imag1 from '../images/mob1.png'
-export default class Cards extends Component {
+class Cards extends Component {
     constructor(){
         super()
         this.state = {
             currentTodo : "",
-            product:[
-                { 
-                    image:"dkahkd",
-                    title:"Aquos Sharp SH-04H /506sh Xx3",
-                    price:"Rs 9,999"
-                },
-                {
-                    image:"",
-                    title:"Aquos Sharp SH-04H /506sh Xx3",
-                    price:"Rs 9,999"
-                },
-                {
-                    image:"",
-                    title:"Aquos Sharp SH-04H /506sh Xx3",
-                    price:"Rs 9,999"
-                },
-                {
-                    image:"",
-                    title:"Aquos Sharp SH-04H /506sh Xx3",
-                    price:"Rs 9,999"
-                },
-                {
-                    image:"",
-                    title:"Aquos Sharp SH-04H /506sh Xx3",
-                    price:"Rs 9,999"
-                },
-                {
-                    image:"",
-                    title:"Aquos Sharp SH-04H /506sh Xx3",
-                    price:"Rs 9,999"
-                },
-                {
-                    image:"",
-                    title:"Aquos Sharp SH-04H /506sh Xx3",
-                    price:"Rs 9,999"
-                },
-                {
-                    image:"",
-                    title:"Aquos Sharp SH-04H /506sh Xx3",
-                    price:"Rs 9,999"
-                },
-                {
-                    image:"",
-                    title:"Aquos Sharp SH-04H /506sh Xx3",
-                    price:"Rs 9,999"
-                }
-            ]
         }
     }
-    render() {
+        render() {
+        console.log(this.props.products)
         return (
             <>
             <div>
-                <Card style={{width:"300px",margin:"5px",border:"1px solid rgb(183,194,198)",backgroundColor:"white"}}>
+                <Card style={{width:"250px",margin:"5px",border:"1px solid rgb(183,194,198)",backgroundColor:"white"}}>
    <div style={{display:"flex"}}>
     <Card.Img variant="top" src={Imag1} />
     <svg width="1em" style={{fontSize:"30px",color:"rgb(0,47,52)"}} height="1em" viewBox="0 0 16 16" className="bi bi-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -73,11 +28,16 @@ export default class Cards extends Component {
       <small className="text-muted">Last updated 3 mins ago</small>
     </Card.Footer>
   </Card>
-                {
-
-                }
+             
             </div>
             </>
         )
     }
 }
+
+function mapStatetoProps(state){
+    return{
+        products:state.ProductReducer.product
+    }
+}
+export default connect(mapStatetoProps)(Cards)

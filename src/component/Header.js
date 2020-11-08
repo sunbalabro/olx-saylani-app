@@ -19,6 +19,7 @@ const nav =[
     {ID:6, label:"Tablets "},
     {ID:7, label:"Land & Plots "},
 ]
+
     return (
         <>
         <div className="header fixed flex aic ">
@@ -38,9 +39,9 @@ const nav =[
             </div>
             <div className='action flex aic'>
             <a href="#myGallery" to='/accounts/signin' data-toggle="modal" data-target="#myModal" className='color fontb s18 sign noul'>Signin</a>
-                <button className='sell aic'>
+                <button style={{borderBottom:"1px solid black"}} className='sell aic'>
                 <i className="fa fa-plus pl aic s24" aria-hidden="true"></i>
-                <h2 className=' font s20'>Sell</h2>
+                <h2 className=' font s20' ><Link to="/AddPost">Sell</Link> </h2>
                 </button>
             </div>
         </div>
