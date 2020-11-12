@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import Sf from "../images/sf.png"
+import Sg from "../images/sg.png"
+import "../style/form.css"
 import firebase from "../firebase/firebase"
 export default class form extends Component {
 gmailAuth=()=>{
@@ -11,10 +14,12 @@ gmailAuth=()=>{
         console.log(user)
         // ...
         
-        firebase.database().ref("user").push({
+        firebase.database().ref(`/user/${user.uid}`).set({
           userName: user.displayName,
           userEmail: user.email,
           userPhoto:  user.photoURL   
+        }).catch((err)=>{
+          console.log(err)
         })
       })
       
@@ -41,10 +46,12 @@ facebookAuth=()=>{
         var user = result.user;
         console.log(user)
         // ...
-        firebase.database().ref("users").child("/user/  ").push({
+        firebase.database().ref(`/user/${user.uid}`).set({
           userName: user.displayName,
           userEmail: user.email,
           userPhoto:  user.photoURL   
+        }).catch((err)=>{
+          console.log(err)
         })
       }).catch(function(error) {
         // Handle Errors here.
@@ -63,22 +70,20 @@ facebookAuth=()=>{
         
         return (
             <>
-            <div>
-               <form >
-                   <input className="s18" type="text" placeholder="Enter Your email"  style={{width:"250px",borderRadius:"10px", border:"1px solid black"}}/>
-                   <br/><br/>   
-                   <input className="s18" type="password" placeholder="Enter Your password"style={{width:"250px",borderRadius:"10px", border:"1px solid black"}}/>
-                   <br/><br/>
-                   <button className="s16 btn-primary">Submit</button>
+            <div className="form">
+               <form style={{width:"350px",textAlign:"center"}}>
+                
+                
                    <br/><br/>
                    
-                   <button type="button" onClick={this.facebookAuth} className="s17" style={{backgroundColor:"rgb(72,103,170)",color:"white", width:"200px",height:"40px"}} >Sign in by Facebook</button>
-                   
-                   
-                   
+                   <button  type="button" onClick={this.facebookAuth} style={{marginBottom:"5px"}} > <img src={Sf} alt=""/>Continue with facebook</button>
+
+                   <br/>
+                   <button type="button" onClick ={this.gmailAuth}> <img src={Sg} alt=""/> Continue with gmail </button>
                    <br/><br/>
-                   <button type="button" onClick ={this.gmailAuth} className="s17" style={{width:"200px",height:"40px"}} >Sign in by <span style={{color:"rgb(61,126,241)"}} class="s20" > G</span><span class="s20"  style={{color:"rgb(211,0,1)"}}>m</span><span class="s20" style={{color:"rgb(246,183,0)"}}>a</span><span class="s20" style={{color:"rgb(61,126,241)"}}>i</span><span class="s20" style={{rgb:"44,164,77"}}>l</span> </button>
-                   
+                   <h5 style={{fontSize:"12px"}}>We won`t share your personel details to anyone</h5>
+                   <br/>
+                   <h5 style={{fontSize:"12px"}}>If you continue you are accepting <span> <a href="/">OLX Terms and Conditions and Privacy Policy</a> </span></h5>
                    </form> 
             </div>
             </>

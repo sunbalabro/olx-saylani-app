@@ -17,10 +17,10 @@ import Clo from "../images/clo.png"
 import Spo from "../images/spo.png"
 import Kid from "../images/kid.png"
 // import "react-bootstrap "
-import DropdownButton from 'react-bootstrap/DropdownButton'
-import Dropdown from 'react-bootstrap/Dropdown'
-import ButtonGroup from 'react-bootstrap/ButtonGroup'
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import DropdownButton from 'react-bootstrap/DropdownButton'
+// import Dropdown from 'react-bootstrap/Dropdown'
+// import ButtonGroup from 'react-bootstrap/ButtonGroup'
+// import 'bootstrap/dist/css/bootstrap.min.css';
 export default class AddPost extends Component {
 
 
@@ -238,39 +238,7 @@ export default class AddPost extends Component {
 
 
                     <br />
-                    {/* <div className="container">
-       
-        <div style={{display: 'flex'}}>
-          <ul className="nav nav-tabs" style={{border: '1px solid black', width: '100px'}}>
-            <li><a dataToggle="tab" href="#home">Home1</a></li>
-            <li><a dataToggle="tab" href="#menu1">Menu 1</a></li>
-            <li><a dataToggle="tab" href="#menu2">Menu 2</a></li>
-            <li><a dataToggle="tab" href="#menu3">Menu 3</a></li>
-          </ul>                              
-          <div className="tab-content" style={{border: '1px solid black', width: '200px', float: 'right', marginRight: '840px'}}>
-            <div id="home" className="tab-pane fade in active">
-              <ul style={{listStyle: 'none'}}>
-                <li>asa</li>
-                <li>as</li>
-                <li>ad</li>
-                <li>asas</li>
-              </ul>
-            </div>
-            <div id="menu1" className="tab-pane fade">
-              <h3>Menu 1</h3>
-              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            <div id="menu2" className="tab-pane fade">
-              <h3>Menu 2</h3>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-            </div>
-            <div id="menu3" className="tab-pane fade">
-              <h3>Menu 3</h3>
-              <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-            </div>
-          </div>
-        </div>
-      </div> */}
+      
                     <br />
                     <div style={{ backgroundColor: "rgb(0,47,52)", padding: "12px", display: "flex" }} className="footer">
                         <div style={{ width: "200px", textAlign: "center" }}>

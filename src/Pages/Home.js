@@ -24,7 +24,7 @@ console.log(snapshot.val())
          <Header />
          <Cards />
         <Footer />
-         <div><button onClick="addTodo()">AddToso</button></div>
+         {/* <div><button onClick="addTodo()">AddToso</button></div> */}
          {/* <h1>{props.mereProduct.name}</h1> */}
         </div>        
                     </div>

@@ -83,7 +83,7 @@ export default class Footer extends Component {
                 </div>                
                 </div>
             </div>
-            <div style={{backgroundColor:"rgb(0,47,52)", padding:"17px"}}>
+            <div style={{backgroundColor:"rgb(0,47,52)",width:"100%", padding:"17px"}}>
                 <div style={{display:"flex"}}>
                     <div style={{marginLeft:"90px",display:"flex"}}>
                     <h6 style={{color:"white",fontSize:"10.6px", fontWeight:"bold"}}>Other Countries</h6>

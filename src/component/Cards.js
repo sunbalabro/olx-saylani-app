@@ -37,7 +37,7 @@ class Cards extends Component {
 
 function mapStatetoProps(state){
     return{
-        products:state.ProductReducer.product
+        products:state.ProductsReducer.product
     }
 }
 export default connect(mapStatetoProps)(Cards)

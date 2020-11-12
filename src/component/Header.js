@@ -4,12 +4,13 @@ import '../App.css'
 import '../props.css'
 import ModalSignin from "../component/ModalSignin"
 import Cara from "./carousel"
-
+import  UserDropdown from "../component/userDropdown.js"
 
 import Ima from '../images/sale.png'
 import IMA from '../images/adv2.png'
+import { connect } from 'react-redux'
 
-export default function Header() {
+function Header(props) {
 const nav =[
     {ID:1, label:"Mobile Phones "},
     {ID:2, label:" Cars "},
@@ -20,6 +21,10 @@ const nav =[
     {ID:7, label:"Land & Plots "},
 ]
 
+console.log(props)
+// if(props == props){
+//   return
+// }
     return (
         <>
         <div className="header fixed flex aic ">
@@ -38,11 +43,26 @@ const nav =[
                 <button className=" go  cfff" style={{}} >   <i className="fa fa-search  s24" aria-hidden="true"></i></button>
             </div>
             <div className='action flex aic'>
-            <a href="#myGallery" to='/accounts/signin' data-toggle="modal" data-target="#myModal" className='color fontb s18 sign noul'>Signin</a>
-                <button style={{borderBottom:"1px solid black"}} className='sell aic'>
+         {
+           Object.keys(props.userData).length == 0 ? (
+<a href="#myGallery"  style={{textDecoration:"none"}} to='/accounts/signin' data-toggle="modal" data-target="#myModal" className='color fontb s18 sign noul'>Signin</a>
+           
+           ):(
+<div className="user">
+           <UserDropdown />
+           </div>
+           )
+         }
+           
+           
+           
+           
+           
+            <Link to="/AddPost" style={{textDecoration:"none"}}>
+                <button className='sell aic'>
                 <i className="fa fa-plus pl aic s24" aria-hidden="true"></i>
-                <h2 className=' font s20' ><Link to="/AddPost">Sell</Link> </h2>
-                </button>
+                <h2 className=' font s20' >Sell </h2>
+                </button></Link>
             </div>
         </div>
         <div className="hnav fixed flex  aic">
@@ -50,11 +70,12 @@ const nav =[
            <button  style={{ border:"1px solid white",backgroundColor:"#ffff"}}className="view-cates flex aic color">
            <h2  className=' font s18'>All Catagories</h2>
            <i className="fa fa-angle-down arrow s26" aria-hidden="true"></i>
+           
            </button>
            <div className="dropdown-content">   
               <div className="row">
                 <div className="column" style={{height:"170px"}}>
-                  <h3 style={{color:"rgb(0, 47, 52)"}}>Mobiles</h3>
+                  <h3>Mobiles</h3>
                   <a href="/">Tablets</a>
                   <a href="/">Accessories</a>
                   <a href="/">Mobile Phones</a><br/>
@@ -223,3 +244,11 @@ const nav =[
         </>
     )
 }
+
+const mapStateToProps = (state) =>{
+  return {
+    userData: state.AuthReducer.userData
+  }
+}
+
+export default connect(mapStateToProps)(Header)
