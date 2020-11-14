@@ -199,6 +199,14 @@ margin-right: 10px;
   display: table;
   clear: both;
 }
+.card-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width:1200px;
+}
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {

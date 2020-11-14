@@ -5,7 +5,6 @@ import '../props.css'
 import ModalSignin from "../component/ModalSignin"
 import Cara from "./carousel"
 import  UserDropdown from "../component/userDropdown.js"
-
 import Ima from '../images/sale.png'
 import IMA from '../images/adv2.png'
 import { connect } from 'react-redux'
@@ -34,13 +33,25 @@ console.log(props)
             <div className='location rel flex aic'>
             <div><i  className="fa fa-search ico s24" aria-hidden="true"></i></div>
             <div>
-                <input className='label s15 font' placeholder='Your Location' type='text' value="Pakistan"/>
-
-             <button style={{height:"45px",width:"30px",background:"#fff" , border:"1px solid black"}} >   <i className="fa fa-angle-down arrow s26" aria-hidden="true"></i></button></div>
+    
+                {/* <input className='label s15 font' placeholder='Your Location' type='text'/> */}
+{/* <input type="text" placeholder="Your" />
+             <button style={{height:"45px",width:"30px",background:"#fff" , border:"1px solid black"}} >   <i className="fa fa-angle-down arrow s26" aria-hidden="true"></i></button> */}
+             <select  style={{width:"272px",color:"rgb(0,47,52)",fontSize:"18px",padding:"10px",border:"1px solid white"}} placeholder="Your Location" name="state" id="states">
+             <option style={{color:"rgb(0,47,52)"}} value="" disabled selected>Your Location</option>
+                                <option value="Azad Kashmir">Azad Kashmir</option>
+                                <option value="Balochistan">Balochistan</option>
+                                <option value="Islamabad Capital Territory">Islamabad Capital Territory</option>
+                                <option value="Khyber Pakhtonkhwa">Khyber Pakhtonkhwa</option>
+                                <option value="North Areas">North Areas</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Sindh">Sindh</option>
+                            </select>
+             </div>
             </div>
             <div  className='search flex '>
-                <input type='text' style={{flex:"1"}}  placeholder='Find MobilePhone, Cars ' classNmae='s15 font query'/>
-                <button className=" go  cfff" style={{}} >   <i className="fa fa-search  s24" aria-hidden="true"></i></button>
+                <input type='text' style={{flex:"1"}}  placeholder='Find MobilePhone, Cars and more....' classNmae='s15 font query'/>
+                <button className=" go  cfff" >   <i className="fa fa-search  s24" aria-hidden="true"></i></button>
             </div>
             <div className='action flex aic'>
          {
@@ -139,14 +150,8 @@ console.log(props)
                   <a href="/">Cameras & Accessories</a>
                   <a href="/">Cameras & Accessories</a>
                   <a href="/">Cameras & Accessories</a>
-                  <a href="/">Cameras & Accessories</a>
-                  <a href="/">Cameras & Accessories</a>
-                  <a href="/">Cameras & Accessories</a>
-                  <a href="/">Cameras & Accessories</a>
-                  <a href="/">Cameras & Accessories</a>
-                  <a href="/">Cameras & Accessories</a>
-                  <a href="/">Cameras & Accessories</a>
-                  <a href="/">Cameras & Accessories</a>
+                  
+                  
                 
                 </div>
                 <div className="column">
@@ -183,11 +188,8 @@ console.log(props)
                   <a href="/">Cameras & Accessories</a>
                   <a href="/">Cameras & Accessories</a>
                   <a href="/">Cameras & Accessories</a>
-                  <a href="/">Cameras & Accessories</a>
-                  <a href="/">Cameras & Accessories</a>
-                  <a href="/">Cameras & Accessories</a>
-                  <a href="/">Cameras & Accessories</a>
-                  <a href="/">Cameras & Accessories</a>
+                 
+                  
                 </div>
                 <div className="column">
                   <h3>Category 4</h3>

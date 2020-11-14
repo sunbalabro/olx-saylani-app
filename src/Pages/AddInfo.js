@@ -61,8 +61,9 @@ import {connect} from "react-redux"
            description:description,
            make:make
        })     
-       
-        }).catch(function (error) {
+       window.location.href="/";
+        })
+        .catch(function (error) {
             // If any task fails, handle this
             console.log(error)
         });
@@ -173,8 +174,11 @@ import {connect} from "react-redux"
                             </div>
                         </div>
                         <div style={{ padding: "30px", margin: "0 auto", width: "700px", borderLeft: "1px solid rgb(204,213,214)", borderBottom: "1px solid rgb(204,213,214)", borderRight: "1px solid rgb(204,213,214)", borderTop: "1px solid rgb(204,213,214)" }}>
-                            <button type="submit" style={{ fontWeight: "bold", width: "90px", padding: "8px", backgroundColor: "rgb(0,47,52)", color: "#fff", fontSize: "15px" }}>Post now</button>
-                        </div>
+                     
+                       <button type="submit" style={{ fontWeight: "bold", width: "90px", padding: "8px", backgroundColor: "rgb(0,47,52)", color: "#fff", fontSize: "15px" }}>Post now</button>
+                        
+                          
+                         </div>
 
                         <br />
                     </form>

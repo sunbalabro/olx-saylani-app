@@ -6,30 +6,65 @@ import Cards from "../component/Cards"
 import firebase from "../firebase/firebase"
 // import React, { Component } from 'react'
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { addProducts } from '../store/action/ProductsAction'
 
 class Home extends Component {
-    componentDidMount(){
-
+    constructor(props) {
+        super(props)
+        this.state = {
+            products: []
+        }
     }
-    getData(){
-        firebase.database().ref("/products").once("value").then((snapshot)=>{
-console.log(snapshot.val())
+    componentDidMount() {
+        this.getData()
+    }
+    getData() {
+        let allProducts = []
+        firebase.database().ref("/data").on("child_added", (sa) => {
+            allProducts.push(sa.val());
+            this.props.setProducts(allProducts);
+        this.setState({ products: allProducts })
+
         })
     }
+    componentWillReceiveProps(nexprops) {
+        this.setState({ products: nexprops.allProducts })
+    }
     render() {
-                return (
-                    <div>
+        return (
+            <div>
                 <div className="home-page">
-         
-         <Header />
-         <Cards />
-        <Footer />
-         {/* <div><button onClick="addTodo()">AddToso</button></div> */}
-         {/* <h1>{props.mereProduct.name}</h1> */}
-        </div>        
-                    </div>
-                )
-            }
-        }
 
-export default Home;
+                    <Header />
+                    <br/>
+                    <h3 style={{textAlign:"center",color:"rgb(0,47,52)"}}>Fresh recommendations</h3>
+                    <div className="card-container">
+                    
+                   
+                    {
+                        this.state.products.map((product, i) => (
+                            <Cards key={i} data={product} />
+                            ))
+                        }
+                        </div>
+                        <br/>
+                    <Footer />
+                    {/* <div><button onClick="addTodo()">AddToso</button></div> */}
+                    {/* <h1>{props.mereProduct.name}</h1> */}
+                </div>
+            </div>
+        )
+    }
+}
+function mapStateToProps(state) {
+    return {
+        allProducts: state.ProductsReducer.products
+    }
+}
+function mapDispatchToProps(dispatch) {
+    return {
+        setProducts: (e) => dispatch(addProducts(e))
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

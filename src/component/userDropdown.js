@@ -8,8 +8,8 @@ import firebase from "../firebase/firebase"
       return (
         <>
 
-<img style={{borderRadius:"20px",width:"33px"}} src={this.props.userData.userPhoto} alt=""/>
-<button style={{width:'57px',fontSize:"13px",textAlign:"center",borderRadius:"10px"}}onClick={()=>firebase.auth().signOut()}>SignOut</button>
+<img style={{borderRadius:"20px",width:"30px"}} src={this.props.userData.userPhoto} alt=""/>
+<button style={{border:"2px solid rgb(0,47,52)",fontSize:"13px",width:"63px",color:"rgb(0,47,52)",fontWeight:"bold",textAlign:"center",borderRadius:"10px",alignItems:"center"}}onClick={()=>firebase.auth().signOut()}>SignOut</button>
 
       </>
         )
